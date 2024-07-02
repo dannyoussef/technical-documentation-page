@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</header>
+
+<body>
+    <nav id="navbar">
+        <header>Java Documentation</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Knowledge_Assumptions" class="nav-link">Knowledge Assumptions</a>
+        <a href="#Hello_World" class="nav-link">Hello World</a>
+        <a href="#Variables_and_Constants" class="nav-link">Variables and Constants</a>
+        <a href="#Operators" class="nav-link">Operators</a>
+        <a href="#Conditions" class="nav-link">Conditions</a>
+        <a href="#Switch" class="nav-link">Switch</a>
+        <a href="#Loops" class="nav-link">Loops</a>
+        <a href="#Reference" class="nav-link">Reference</a>
+    </nav>
+    <main id="main-doc">
+        <section class=main-section id="Introduction">
+            <header class="topic">Introduction</header>
+            <p>Java is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion
+                devices run Java.</p>
+            <ul>
+                <li>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)</li>
+                <li>It is one of the most popular programming language in the world</li>
+                <li>It is easy to learn and simple to use</li>
+                <li>It is open-source and free</li>
+                <li>It is secure, fast and powerful</li>
+                <li>Java is an object oriented language which gives a clear structure to programs and allows code to be
+                    reused, lowering development costs</li>
+            </ul>
+        </section>
+        <section class=main-section id="Knowledge_Assumptions">
+            <header class="topic">Knowledge Assumptions</header>
+            <p>This guide assumes you have the following basic background: </p>
+            <ul>
+                <li>Some programming experience</li>
+                <li>Basic mathematical skills</li>
+            </ul>
+        </section>
+        <section class=main-section id="Hello_World">
+            <header class="topic">Hello World</header>
+            <p>No programming guide is complete without a "Hello, world" program. Copy the code below and paste it into
+                any Java-supported IDE:</p>
+            <pre class="code-block">
+            <code>public class Main {<br>
+                    public static void main(String[] args) {<br>
+                    System.out.println("Hello World");<br>
+                    }<br>
+            }</code>
+            </pre>
+        </section>
+        <section class=main-section id="Variables_and_Constants">
+            <header class="topic">Variables and Constants</header>
+            <p>Variables are containers for storing data values. In Java, there are different types of variables, for
+                example:</p>
+            <ul>
+                <li><code>String</code> - stores text, such as "Hello". String values are surrounded by double quotes
+                </li>
+                <li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+                <li><code>float</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+                <li><code>boolean</code> - stores values with two states: true or false</li>
+            </ul>
+            <p>To create a variable, you must specify the type and assign it a value:</p>
+            <code>type variable = value;</code>
+            <p>Where type is one of Java's types (such as <code>int</code> or <code>String</code>), and variable is the
+                name of the variable (such as x or name). The equal sign is used to assign values to the variable.
+            </p>
+            <p>However, you can add the final keyword if you don't want others (or yourself) to overwrite existing
+                values (this will declare the variable as "final" or "constant", which means unchangeable and
+                read-only):
+            </p>
+            <code>final int myNum = 15;<br></code>
+            <code>myNum = 20;  // will generate an error: cannot assign a value to a final variable</code>
+        </section>
+        <section class="main-section" id="Operators">
+            <header class="topic">Operators</header>
+            <p>Operators are used to perform operations on variables and values. In the example below, we use the
+                <code>+</code>
+                operator to add together two values:
+            </p>
+            <code>int x = 100 + 50;</code>
+            <p>Although the <code>+</code> operator is often used to add together two values, like in the example above,
+                it can also be used to add together a variable and a value, or a variable and another variable:</p>
+            <pre class="code-block">
+                <code>
+                    int sum1 = 100 + 50;        // 150 (100 + 50)<br>
+                    int sum2 = sum1 + 250;      // 400 (150 + 250)<br>
+                    int sum3 = sum2 + sum2;     // 800 (400 + 400)
+                </code>
+            </pre>
+            <p>Java divides the operators into the following groups:</p>
+            <ul>
+                <li>Arithmetic operators</li>
+                <li>Assignment operators</li>
+                <li>Comparison operators</li>
+                <li>Logical operators</li>
+                <li>Bitwise operators</li>
+            </ul>
+            <p>Arithmetic operators are used to perform common mathematical operations.</p>
+            <ul>
+                <li><code>+</code> = Addition - Adds together two values</li>
+                <li><code>-</code> = Subtraction - Subtracts one value from another</li>
+                <li><code>*</code> = Multiplication - Multiplies two values</li>
+                <li><code>/</code> = Division - Divides one value by another</li>
+                <li><code>%</code> = Modulus - Returns the division remainder</li>
+                <li><code>++</code> = Increment - Increases the value of a variable by 1</li>
+                <li><code>--</code> = Decrement - Decreases the value of a variable by 1</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Conditions">
+            <header class="topic">Conditions</header>
+            <p>Java supports the usual logical conditions from mathematics:</p>
+            <ul>
+                <li>Less than: <code>a < b</code></li>
+                <li>Less than or equal to: <code>a <= b</code></li>
+                <li>Greater than: <code>a > b</code></li>
+                <li>Greater than or equal to: <code>a >= b</code></li>
+                <li>Equal to <code>a == b</code></li>
+                <li>Not Equal to: <code>a != b</code></li>
+            </ul>
+            <p>You can use these conditions to perform different actions for different decisions. Java has the following
+                conditional statements:
+            </p>
+            <ul>
+                <li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true</li>
+                <li>Use <code>else</code> to specify a block of code to be executed, if the same condition is false</li>
+                <li>Use <code>else if</code> to specify a new condition to test, if the first condition is false</li>
+                <li>Use <code>switch</code> to specify many alternative blocks of code to be executed</li>
+            </ul>
+            <p>Use the <code>if</code> statement to specify a block of Java code to be executed if a condition is true.
+            </p>
+            <pre class="code-block">
+                <code>if (condition) {<br>
+                    // block of code to be executed if the condition is true<br>
+                }</code>
+            </pre>
+        </section>
+        <section class="main-section" id="Switch">
+            <header class="topic">Switch</header>
+            <p>Use the switch statement to select one of many code blocks to be executed.</p>
+            <p>This is how it works:</p>
+            <ul>
+                <li>The <code>switch</code> expression is evaluated once.</li>
+                <li>The value of the expression is compared with the values of each case.</li>
+                <li>If there is a match, the associated block of code is executed.</li>
+                <li>The <code>break</code> and <code>default</code> keywords are optional</li>
+            </ul>
+            <pre class="code-block">
+                <code>switch(expression) {
+                    case x:
+                      // code block
+                      break;
+                    case y:
+                      // code block
+                      break;
+                    default:
+                      // code block
+                }</code>
+            </pre>
+        </section>
+        <section class="main-section" id="Loops">
+            <header class="topic">Loops</header>
+            <p>Loops can execute a block of code as long as a specified condition is reached. Loops are handy because
+                they save time, reduce errors, and they make code more readable.
+            </p>
+            <p>The <code>while</code> loop loops through a block of code as long as a specified condition is true:</p>
+            <pre class="code-block">
+            <code>while (condition) {<br>
+                // code block to be executed<br>
+              }</code>
+            </pre>
+            <p>The <code>do/while</code> loop is a variant of the <code>while</code> loop. This loop will execute the
+                code block once, before checking if the condition is true, then it will repeat the loop as long as the
+                condition is true.
+            </p>
+            <pre class="code-block">
+                <code>do {<br>
+                    // code block to be executed<br>
+                }<br>
+                while (condition);
+                </code>
+            </pre>
+            <p>Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+        </section>
+        <section class=main-section id="Reference">
+            <header class="topic">Reference</header>
+            <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/java/java_intro.asp"
+                    target="_blank" id="reference-link">W3Schools</a>.
+            </p>
+        </section>
+
+    </main>
+</body>
+
+</html>
